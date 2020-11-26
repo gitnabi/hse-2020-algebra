@@ -1,0 +1,114 @@
+%% прямой шрифт для имен операторов в математическом режиме
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\ort}{ort}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Vol}{Vol}
+\let\Im\undefined
+\DeclareMathOperator{\Im}{Im}
+\let\ker\undefined
+\DeclareMathOperator{\ker}{Ker}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\sgn}{sgn}
+\let\hom\undefined
+\DeclareMathOperator{\hom}{Hom}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\e}{Э}
+\DeclareMathOperator{\MAJ}{MAJ}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GL}{GL}
+
+\DeclareSymbolFontAlphabet{\amsmathbb}{AMSb}%
+
+%% Красивые <= и >=
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
+%% Более привычные греческие буквы
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
+
+\newcommand*\xor{\mathbin{\oplus}}
+
+\newcommand{\To}{\Longrightarrow}
+\newcommand{\tto}{\underrightarrow}
+\newcommand{\Eq}{\Longleftrightarrow}
+\newcommand{\eq}{\leftrightarrow}
+\newcommand{\tri}{\bigtriangleup}
+\newcommand{\reduction}{\rightsquigarrow}
+
+\newcommand{\fm}{f^{-1}}
+
+%% Сокращения для обозначения множеств
+\def\HH{{\amsmathbb H}}
+\def\LL{{\amsmathbb L}}
+\def\FF{{\amsmathbb F}}
+\def\CC{{\amsmathbb C}}
+\def\KK{{\amsmathbb K}}
+\def\TT{{\amsmathbb T}}
+\def\ZZ{{\amsmathbb Z}}
+\def\RR{{\amsmathbb R}}
+\def\SS{{\amsmathbb S}}
+\def\NN{{\amsmathbb N}}
+\def\QQ{{\amsmathbb Q}}
+\def\PP{{\amsmathbb P}}
+\def\AA{{\amsmathbb A}}
+\def\ee{{\mathbb e}}
+\def\ff{{\mathbb f}}
+
+
+%% Изоморфизм
+\newcommand*\MapsTo{%
+  \xrightarrow[]{\raisebox{-0.25 em}{\smash{\ensuremath{\sim}}}}%
+}
+
+% Символ делимости (три вертикальные точки)
+\DeclareRobustCommand{\divby}{%
+  \mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
+}
+
+%%%% Свои цвета
+\colorlet{lemmacolor}{gray!80!green!18!}
+\colorlet{definitioncolor}{gray!80!yellow!18!}
+\colorlet{theoremcolor}{gray!80!blue!18!}
+\colorlet{proofcolor}{gray!80!green!18!}
+\colorlet{myOrange}{red!70!green}
+\colorlet{myBlue}{blue!40!gray}
+\colorlet{myRed}{red!70!gray}
+\colorlet{myGreen}{green!40!black}
+
+
+%% окружность вокруг переданного символа
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+  \node[shape=circle,draw,inner sep=2pt] (char) {#1};}} 
+
+
+%% Раздел без нумерации и отображаемый в содержание
+\newcounter{mysectioncounter}    %% счетчик для номера задачи
+\setcounter{mysectioncounter}{0} %% начальное значение счетчика
+\newcommand{\mysection}{
+    \addtocounter{mysectioncounter}{1}
+    \addtocounter{section}{1}
+    \section*{\centering Вопрос \arabic{mysectioncounter}}
+    \setcounter{subsection}{0}
+    \addcontentsline{toc}{section}{Вопрос \arabic{mysectioncounter}}
+    \vspace{0.5cm}
+}
+
+%% цвет подраздела и подподраздела в Содержание
+\renewcommand{\cftsubsecfont}{\hypersetup{linkcolor=myGreen}}
+\renewcommand{\cftsubsubsecfont}{\hypersetup{linkcolor=myOrange}}
+
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+

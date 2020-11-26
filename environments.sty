@@ -1,0 +1,183 @@
+%%% Теоремы
+\theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}[theorem]{Лемма}
+
+\theoremstyle{remark} % "Примечание"
+\newtheorem*{example}{Пример}
+\newtheorem*{proposal}{Предложение}
+\newtheorem*{comment}{Замечание}
+\newtheorem*{exercise}{Упражнение}
+\newtheorem*{properties}{Свойства}
+
+%%% Определение
+\newenvironment{definition}{
+  \begingroup
+  \setlength{\parindent}{0.18in} 
+  \begin{mdframed}[backgroundcolor=definitioncolor,
+                       topline=false,
+                       rightline=false,
+                       leftline=false,
+                       bottomline=false,
+                       innertopmargin=3pt,
+                       innerbottommargin=3pt,
+                       innerrightmargin=4pt,
+                       innerleftmargin=4pt]
+    \textbf{\textsf{Определение:}}
+  \end{mdframed}\par\vspace{-0.2cm}
+}{
+\vspace{-0.78cm}
+\begin{flushright}
+ \begin{tikzpicture}
+  \hspace{0.05cm}
+  \draw (0, 0) -- (0.7, 0) -- (0.7, 0.5);
+ \end{tikzpicture}
+\end{flushright}
+\vspace{-0.5cm}
+\endgroup
+}
+
+%%% Теорема
+\renewenvironment{theorem}{
+  \begingroup
+  \setlength{\parindent}{0.18in} 
+  \begin{mdframed}[backgroundcolor=theoremcolor,
+                       topline=false,
+                       rightline=false,
+                       leftline=false,
+                       bottomline=false,
+                       innertopmargin=3pt,
+                       innerbottommargin=3pt,
+                       innerrightmargin=4pt,
+                       innerleftmargin=4pt]
+    \textbf{\textsf{Теорема:}}
+  \end{mdframed}\par\vspace{-0.2cm}
+}{
+\vspace{-0.78cm}
+\begin{flushright}
+ \begin{tikzpicture}
+  \hspace{0.05cm}
+  \draw (0, 0) -- (0.7, 0) -- (0.7, 0.5);
+ \end{tikzpicture}
+\end{flushright}
+\vspace{-0.5cm}
+\endgroup
+}
+
+
+%%% Доказательство
+\renewenvironment{proof}{
+  \begingroup
+  \vspace{0.2cm}
+  \textit{\underline{Доказательство}:}\par
+  \setlength{\parindent}{0.18in}
+}{\endgroup \qed \par}
+
+
+%%% Лемма
+\renewenvironment{lemma}{
+  \begingroup
+  \setlength{\parindent}{0.18in} 
+  \begin{mdframed}[backgroundcolor=lemmacolor,
+                       topline=false,
+                       rightline=false,
+                       leftline=false,
+                       bottomline=false,
+                       innertopmargin=3pt,
+                       innerbottommargin=3pt,
+                       innerrightmargin=4pt,
+                       innerleftmargin=4pt]
+    \textbf{\textsf{Лемма:}}
+  \end{mdframed}\par\vspace{-0.2cm}
+}{
+\vspace{-0.78cm}
+\begin{flushright}
+ \begin{tikzpicture}
+  \hspace{0.05cm}
+  \draw (0, 0) -- (0.7, 0) -- (0.7, 0.5);
+ \end{tikzpicture}
+\end{flushright}
+\vspace{-0.5cm}
+\endgroup
+}
+
+%%% Предложение
+\renewenvironment{proposal}{
+  \begingroup
+  \setlength{\parindent}{0.18in} 
+  \begin{mdframed}[backgroundcolor=lemmacolor,
+                       topline=false,
+                       rightline=false,
+                       leftline=false,
+                       bottomline=false,
+                       innertopmargin=3pt,
+                       innerbottommargin=3pt,
+                       innerrightmargin=4pt,
+                       innerleftmargin=4pt]
+    \textbf{\textsf{Предложение:}}
+  \end{mdframed}\par\vspace{-0.2cm}
+}{
+\vspace{-0.98cm}
+\begin{flushright}
+ \begin{tikzpicture}
+  \hspace{0.05cm}
+  \draw (0, 0) -- (0.7, 0) -- (0.7, 0.5);
+ \end{tikzpicture}
+\end{flushright}
+\vspace{-0.5cm}
+\endgroup
+}
+
+%%% Пример
+\renewenvironment{example}[1][]{
+  \begingroup
+  \textbf{\textsf{Пример#1:}}\par 
+  \setlength{\parindent}{0.18in} 
+}{ \endgroup }
+
+
+%%% Замечание
+\renewenvironment{comment}{
+  \begingroup
+  \textbf{\textsf{Замечание:}}\par 
+  \setlength{\parindent}{0.18in} 
+}{ \endgroup }
+
+
+%%% Упражнение
+\renewenvironment{exercise}{
+  \begingroup
+  \textbf{\textsf{Упражнение:}}\par 
+  \setlength{\parindent}{0.18in} 
+}{ \endgroup }
+
+
+%%% Свойства
+\renewenvironment{properties}{
+  \begingroup
+  \textbf{\textsf{Свойства:}}\par 
+  \setlength{\parindent}{0.18in}
+  \vspace{-0.2cm}
+}{ \endgroup }
+
+%%% Следствие
+\newenvironment{corollary}[1][] {
+  \vspace{0.5cm}
+  \textbf{\textsf{Следствие#1.}}
+}{ } 
+
+
+%%% Расширенная матрица
+\newenvironment{amatrix}[2]{%
+    \left(\begin{array}{@{}*{#1}{c}|*{#2}{c}@{}}
+}{%
+    \end{array}\right)
+}
+
+
+
+
+
+
+
+

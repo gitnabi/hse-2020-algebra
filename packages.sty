@@ -1,0 +1,78 @@
+
+
+%%% Работа с русским языком
+\RequirePackage{cmap}                   % поиск в PDF
+\RequirePackage{mathtext}               % русские буквы в формулах
+\RequirePackage{indentfirst}            % Отступ первого параграфа
+\RequirePackage[T2A]{fontenc}           % кодировка
+\RequirePackage[utf8]{inputenc}         % кодировка исходного текста
+\RequirePackage[english,russian]{babel} % локализация и переносы
+
+\RequirePackage[left=1.5cm,
+                right=1.5cm,
+                top=1.1cm,
+                bottom=2cm,
+                bindingoffset=0cm,
+                a4paper]{geometry} % размеры до полей
+
+
+%%% Дополнительная работа с математикой
+\RequirePackage{amsmath, amsfonts, amssymb,
+                mathbbol, amsthm, mathtools} % Математическая верстка
+\RequirePackage{mathbbol}                    %\mathbb для строчных
+\RequirePackage{float} 	       % Улучшен интерфейс для плавающие точки
+\RequirePackage{units, icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+
+%% Оглавление с ссылками
+\RequirePackage[final,  unicode=true,
+						colorlinks = true,
+						linkcolor = myBlue,
+						citecolor = black,
+						filecolor=magenta,
+						urlcolor=cyan ]{hyperref}     % Для гиперссылок в PDF
+\RequirePackage{csquotes}         % Еще инструменты для ссылок
+\RequirePackage{nameref}
+\RequirePackage{tocloft}
+
+
+
+\RequirePackage{enumitem}
+
+
+
+
+%%% Программирование
+\RequirePackage{etoolbox}            % логические операторы
+\RequirePackage{pseudocode}          % Среда для задания алгоритмов естественным образом
+
+
+%% Графики функций
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+
+
+
+
+
+
+\RequirePackage{mdframed} % текст в рамке
+
+
+\PassOptionsToPackage{svgnames}{xcolor}  % для выделение текста цветом
+
+
+%% Интерлиньяж
+\RequirePackage{setspace} 
+%\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+%\singlespacing % Интерлиньяж 1
+
+
+
+\RequirePackage{latexrelease}
+
+
+\RequirePackage{changepage}    % для окружения с заданным отступом
+
+
